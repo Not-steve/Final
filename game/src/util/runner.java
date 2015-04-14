@@ -28,9 +28,9 @@ public class runner {
         //util.utility.output(square.getBaseTile(0, 0));
 
         world square;
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             square = new world(500);
-            util.utility.output("World "+i);
+            util.utility.output("World "+(i+1));
         }
 
         util.utility.output("\n\n\n\nForests:" + utility.getForestNum() + "\nTowns:" + utility.getTownNum());

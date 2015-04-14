@@ -24,7 +24,7 @@ public class world extends tickable{
                 world[x][y] = new baseTile(x, y);
 
                 //add random races with a 20% chance
-                world[x][y].addRandomRace(55);
+                world[x][y].addRandomRace(50);
 
                 if (world[x][y].isInhabited()){
                     world[x][y].addRandomRace(33);
