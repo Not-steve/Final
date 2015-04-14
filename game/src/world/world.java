@@ -11,10 +11,8 @@ import static java.lang.Object.*;
  */
 public class world extends tickable{
     baseTile[][] world;
-    private int num;
 
     public world(int num) {
-        this.num = num + 2;
         util.utility.output("Preparing World");
 
         world = new baseTile[num+2][num+2];
