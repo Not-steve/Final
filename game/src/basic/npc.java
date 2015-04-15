@@ -38,6 +38,6 @@ public class npc extends isSentient {
             getArea().addSelfToArea(new undead(this));
         }
         else
-            util.utility.output("");
+            util.utility.output("\n");
     }
 }

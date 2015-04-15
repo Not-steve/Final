@@ -14,8 +14,8 @@ public class race implements Comparable{
     private final ArrayList<ability> RACEABILITIES;
     private final int RACEAFFILIATION, RACIALSPEED;
     private final armor RACIALARMOR;
-    private ArrayList<race> racialAllies, racialEnemies;
     private final String NAMEPLURAL;
+    private ArrayList<race> racialAllies, racialEnemies;
 
     public race(String name, String namePlural, baseStats stats, ArrayList<ability> abe, int affiliation, ArrayList<race> friends,
                 ArrayList<race> enemies, armor natArmor, int sp) {
@@ -80,7 +80,7 @@ public class race implements Comparable{
             return NAME.compareTo(((race) o).NAME);
         }
         else {
-            util.utility.output("Error in comparing races");
+            util.utility.outputln("Error in comparing races");
             return Integer.parseInt(null);
         }
     }

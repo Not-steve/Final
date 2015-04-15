@@ -40,7 +40,7 @@ public abstract class isLiving extends damageable {
     }
 
     public void die() {
-        util.utility.output(getName() + " has died.");
+        util.utility.outputln(getName() + " has died.");
         this.getArea().removeSelfFromArea(this);
     }
 
@@ -88,7 +88,7 @@ public abstract class isLiving extends damageable {
             if(!stillAlive())
                 die();
             else
-                util.utility.output(name + " is seriously injured");
+                util.utility.outputln(name + " is seriously injured");
         }
     }
 }

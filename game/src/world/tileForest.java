@@ -1,5 +1,7 @@
 package world;
 
+import util.utility;
+
 /**
  * Created by brian on 4/13/2015.
  */
@@ -17,7 +19,7 @@ public class tileForest extends baseTile {
     //todo make new populate
     @Override
     protected void populate() {
-        super.populate(util.utility.ent);
+        super.populate(utility.ent);
     }
 
 

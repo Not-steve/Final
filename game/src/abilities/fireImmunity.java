@@ -18,6 +18,6 @@ public class fireImmunity extends activeAbility{
 
     @Deprecated
     public void activate(isLiving creature) {
-        util.utility.output("Error in " + this + " need to send in damage too");
+        util.utility.outputln("Error in " + this + " need to send in damage too");
     }
 }

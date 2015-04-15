@@ -11,7 +11,7 @@ public class world extends tickable{
     baseTile[][] world;
 
     public world(int num) {
-        util.utility.output("Preparing World");
+        util.utility.outputln("Preparing World");
 
         world = new baseTile[num+2][num+2];
 
@@ -40,10 +40,10 @@ public class world extends tickable{
         }
 
 
-        util.utility.output("World Created");
-        util.utility.output("Creating towns and Forests");
+        util.utility.outputln("World Created");
+        util.utility.outputln("Creating towns and Forests");
         makeTowns();
-        util.utility.output("Towns and Forests created");
+        util.utility.outputln("Towns and Forests created");
 
     }
 

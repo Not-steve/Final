@@ -61,7 +61,7 @@ public abstract class isSentient extends isLiving {
             statChange.addStats(arm.getArmorStats());
             return getDefenses().set(0, arm);
         } else {
-            util.utility.output("Are you sure you want to replace the current armor with the new set:(y/n)  ");
+            util.utility.outputln("Are you sure you want to replace the current armor with the new set:(y/n)  ");
             String yesNo = scan.nextLine();
             if (yesNo.equalsIgnoreCase("y")) {
                 return getDefenses().set(0, arm);

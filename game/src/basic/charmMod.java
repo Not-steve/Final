@@ -14,7 +14,7 @@ public class charmMod extends statMod {
         if (main instanceof isSentient) {
             isSentient temp = (isSentient) main;
             //output reason for base changes
-            util.utility.output(dialogue);
+            util.utility.outputln(dialogue);
 
             //change stats by change
             int newCharm = temp.getStats().getCharm() + change;

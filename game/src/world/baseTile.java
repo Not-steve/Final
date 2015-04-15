@@ -81,7 +81,7 @@ public class baseTile extends tickable {
             return features.get(num);
         }
         else {
-            util.utility.output("error in Tile. invalid area gotten. There are "+features.size()+" areas");
+            util.utility.outputln("error in Tile. invalid area gotten. There are " + features.size() + " areas");
             return null;
         }
     }
