@@ -1,6 +1,5 @@
 package basic;
 
-import world.area;
 import world.nullArea;
 
 /**
@@ -8,6 +7,6 @@ import world.nullArea;
  */
 public class bark extends armor {
     public bark(int l) {
-        super(new baseStats(0,0,5*l,0,15, 0), 50, new nullArea(), l, true);
+        super(new baseStats(0,0,5*l,0,15, 0), new nullArea(), l, true);
     }
 }

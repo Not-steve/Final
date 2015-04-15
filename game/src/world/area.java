@@ -1,9 +1,11 @@
 package world;
 
-import java.util.ArrayList;
-
 import basic.damageable;
+import basic.npc;
+import basic.race;
 import basic.tree;
+
+import java.util.ArrayList;
 
 /**
  * Created by brian on 4/9/2015.
@@ -40,6 +42,12 @@ public class area extends tickable{
     //Todo make an actual populate
     public void populate(){
         actors.add(new tree(this));
+    }
+
+    public void  populate(race r){
+        for (int i = 0; i < (int)(Math.random()*5+5); i++) {
+            actors.add(new npc(this, r, 30));
+        }
     }
 
     @Override

@@ -10,23 +10,23 @@ import java.util.ArrayList;
  */
 public class armor extends damageable {
 
-    private baseStats armorStats;
     protected ArrayList<ability> immunity;
+    private baseStats armorStats;
     private boolean physical;
 
-    /*equipment
-    @stats stats the the armor buffs/hurts
-    @h the number of hit points the armor can take
+    /**equipment
+     * @param stats stats the the armor buffs/hurts
+     * @param creature
     */
-    public armor(baseStats stats, int h, damageable creature, int l, boolean phys, ArrayList<ability> immunity){
-        super(h, creature.getArea(), l, "Armor");
+    public armor(baseStats stats,  damageable creature, int l, boolean phys, ArrayList<ability> immunity){
+        super(-1, creature.getArea(), l, "Armor");
         this.immunity = immunity;
         physical = phys;
         armorStats = stats;
     }
 
-    public armor(baseStats stats, int h, area a, int l, boolean phys) {
-        super(h, a, l, "Armor");
+    public armor(baseStats stats, area a, int l, boolean phys) {
+        super(-1, a, l, "Armor");
         physical = phys;
         armorStats = stats;
     }
@@ -43,11 +43,11 @@ public class armor extends damageable {
     public baseStats getArmorStats() {
         return armorStats;
     }
-    public ArrayList<ability> getImmunity() {return immunity;}
-
 
     public void setArmorStats(baseStats armorStats) {
         this.armorStats = armorStats;
     }
+
+    public ArrayList<ability> getImmunity() {return immunity;}
 
 }

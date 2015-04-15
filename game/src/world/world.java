@@ -4,8 +4,6 @@ import basic.race;
 
 import java.util.ArrayList;
 
-import static java.lang.Object.*;
-
 /**
  * Created by brian on 4/11/2015.
  */
@@ -19,7 +17,7 @@ public class world extends tickable{
 
         for (int x = 0; x < world.length; ++x) {
             for (int y = 0; y < world.length; ++y) {
-                world[x][y] = new baseTile(x, y);
+                world[x][y] = new baseTile();
 
                 //add random races with a 20% chance
                 world[x][y].addRandomRace(50);

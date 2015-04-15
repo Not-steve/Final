@@ -1,14 +1,16 @@
 package world;
 
-import basic.race;
-
 /**
  * Created by brian on 4/13/2015.
  */
 public class tileForest extends baseTile {
+    int x,y;
 
     public tileForest(int x, int y) {
-        super(x, y);
+        super();
+        this.x = x;
+        this.y = y;
+        areaName = "Town Square";
     }
 
 

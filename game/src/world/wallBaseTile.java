@@ -5,7 +5,11 @@ package world;
  */
 public class wallBaseTile extends baseTile {
     public wallBaseTile(int x, int y) {
-        super(x, y, 1);
+        super();
+    }
+
+    @Override
+    protected void populate() {
     }
 
     @Override

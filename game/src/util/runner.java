@@ -5,6 +5,7 @@ import abilities.fireImmunity;
 import basic.armor;
 import basic.baseStats;
 import basic.race;
+import world.nullArea;
 import world.world;
 
 import java.util.ArrayList;
@@ -18,9 +19,9 @@ public class runner {
         baseStats stats = new baseStats(10,10,10,10,10,10), armStats = new baseStats(2,2,2,2,2,2);
         abe.add(new fireImmunity(100));
 
-        race human = new race("Human", "Humans",stats, abe, 50, null, null, new armor(armStats, 50, null, 1, true), 5);
-        race Gangsters = new race("Elemental","Elementals",stats, abe, 50, null, null, new armor(armStats, 50, null, 1, true), 5);
-        race begees = new race("Monster","Monsters",stats, abe, 50, null, null, new armor(armStats, 50, null, 1, true), 5);
+        race human = new race("Human", "Humans",stats, abe, 50, null, null, new armor(stats, new nullArea(), 1, true), 5);
+        race Gangsters = new race("Elemental","Elementals",stats, abe, 50, null, null, new armor(stats, new nullArea(), 1, true), 5);
+        race begees = new race("Monster","Monsters",stats, abe, 50, null, null, new armor(stats, new nullArea(), 1, true), 5);
 
 
         //baseTile usage = new baseTile(3,5);

@@ -8,15 +8,15 @@ import world.area;
 public class zeroArmor extends armor {
 
     public zeroArmor(damageable creature) {
-        super(new baseStats(0, 0, 0, 0, 0, 0), -1, creature.getArea(), 0, true);
+        super(new baseStats(0, 0, 0, 0, 0, 0), creature.getArea(), 0, true);
     }
 
     public zeroArmor(area a) {
-        super(new baseStats(0, 0, 0, 0, 0, 0), -1, a, 0, true);
+        super(new baseStats(0, 0, 0, 0, 0, 0),  a, 0, true);
     }
 
     public zeroArmor() {
-        super(new baseStats(0, 0, 0, 0, 0, 0), -1, null, 0, true);
+        super(new baseStats(0, 0, 0, 0, 0, 0),  null, 0, true);
     }
 
 

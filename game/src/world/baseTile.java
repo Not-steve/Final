@@ -12,40 +12,33 @@ public class baseTile extends tickable {
     protected int x,y;
     protected ArrayList<area> features = new ArrayList<area>();
     protected ArrayList<race> inhabitants = new ArrayList<race>();
+    protected String areaName = "Meadow";
 
 
 
     //raced tile
-    public baseTile(int x, int y, race r){
-        this.x=x;
-        this.y=y;
+    public baseTile(race r){
         inhabitants.add(r);
         populate(inhabitants.get(0));
     }
 
     //raceless tile
-    public baseTile(int x, int y){
-        this.x=x;
-        this.y=y;
+    public baseTile(){
         populate();
-    }
-
-    //wall tile
-    public baseTile(int x, int y, int i){
-        this.x=x;
-        this.y=y;
     }
 
     // TODO make race based populate
     protected void populate(race r){
         for(int i = 4; i>=0; --i){
-            features.add(new area("Meadow"));
+            area a = new area("meadow");
+            a.populate(r);
+            features.add(a);
         }
     }
 
     protected void populate(){
         for(int i = 4; i>=0; --i){
-            features.add(new area("Meadow"));
+            features.add(new area(areaName));
         }
     }
 

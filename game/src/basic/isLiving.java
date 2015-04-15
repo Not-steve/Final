@@ -12,14 +12,15 @@ import java.util.Collections;
 public abstract class isLiving extends damageable {
     protected int speed;
     protected ArrayList<item> inventory;
-    ArrayList<ability> powers;
     protected ArrayList<armor> defenses = new ArrayList<armor>();
     protected Object weapons;
+    ArrayList<ability> powers;
 
     public isLiving(int h, area a, int l, int sp, armor arm, String name) {
         super(h, a, l, name);
         speed = sp;
-        defenses.add(arm);
+        if(arm != null)
+            defenses.add(arm);
     }
 
     public isLiving(int h, area a, int l, int sp, ArrayList<armor> arm, String name) {

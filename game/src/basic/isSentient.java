@@ -10,9 +10,9 @@ import java.util.Scanner;
  */
 public abstract class isSentient extends isLiving {
 
+    protected static Scanner scan = new Scanner(System.in);
     protected baseStats stats, statChange;
     protected int affiliation;
-    protected Scanner scan = new Scanner(System.in);
     protected race r;
 
     /**
@@ -96,13 +96,13 @@ public abstract class isSentient extends isLiving {
         return affiliation;
     }
 
-    protected isSentient getIsSentient(){
-        return this;
-    }
-
     //setters
     public void setAffiliation(int affiliation) {
         this.affiliation = affiliation;
+    }
+
+    protected isSentient getIsSentient(){
+        return this;
     }
 
 

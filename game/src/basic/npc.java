@@ -16,8 +16,18 @@ public class npc extends isSentient {
         super(h, a, l, type, sp, stats, startingAffiliation, arm, name);
     }
 
+    public npc(area a, race type, int startingAffiliation) {
+        super(40+(int)(Math.random()*21), a, 1+(int)(Math.random()*2)+(int)(Math.random()*2), type, 5, new baseStats(2,2,2,2,2,2),
+                startingAffiliation, new armor(new baseStats(0,0,2,-2,2,2),a, 1 ,true), util.utility.generateName(type));
+    }
+
     public npc(isSentient creature) {
         super(creature);
+    }
+
+    //todo implement a full response system
+    public int response(){
+        return -1;
     }
 
     @Override
