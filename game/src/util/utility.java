@@ -12,9 +12,12 @@ import java.util.Scanner;
 public final class utility {
     public static race ent = new race("Ent", "Ents",new basic.baseStats(5,15,20,0,10,10),new ArrayList<abilities.ability>(),
             15, new ArrayList<race>(), new ArrayList<race>(), new basic.bark(1), 1 );
+    private static Scanner scan = new Scanner(System.in);
     private static ArrayList<basic.race> races = new ArrayList<basic.race>();
     private static ArrayList<tileBase> forests = new ArrayList<tileBase>();
     private static ArrayList<tileBase> towns = new ArrayList<tileBase>();
+    public static race ent = new race("Ent", "Ents",new basic.baseStats(5,15,20,0,10,10),new ArrayList<abilities.ability>(),
+            15, new ArrayList<race>(), new ArrayList<race>(), new basic.bark(1), 1 );
     private static Scanner scan = new Scanner(System.in);
 
     public static int chooseList(ArrayList<Object> list){
