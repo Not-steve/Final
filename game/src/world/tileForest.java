@@ -1,25 +1,20 @@
 package world;
 
-import util.utility;
-
 /**
  * Created by brian on 4/13/2015.
  */
-public class tileForest extends baseTile {
+public class tileForest extends tileBase {
     int x,y;
 
     public tileForest(int x, int y) {
         super();
         this.x = x;
         this.y = y;
-        areaName = "Town Square";
     }
 
-
-    //todo make new populate
+    //todo make forest populate
     @Override
     protected void populate() {
-        super.populate(utility.ent);
     }
 
 

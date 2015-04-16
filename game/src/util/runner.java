@@ -36,7 +36,8 @@ public class runner {
         //util.utility.outputln(square.getBaseTile(0, 0));
 
         world square;
-        /**/
+        square = new world(500);
+        /*
         try {
             for (int i = 0; i < 1000; i++) {
                 square = new world(500);
@@ -44,7 +45,7 @@ public class runner {
             }
         }catch (OutOfMemoryError e){
             utility.outputln("Out of memory");
-        }
+        }*/
 
 
         util.utility.outputln("\n\n\n\nForests:" + utility.getForestNum() + "\nTowns:" + utility.getTownNum());

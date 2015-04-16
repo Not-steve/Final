@@ -1,6 +1,7 @@
 package util;
 
 import basic.race;
+import world.tileBase;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,8 +14,8 @@ public final class utility {
             15, new ArrayList<race>(), new ArrayList<race>(), new basic.bark(1), 1 );
     private static Scanner scan = new Scanner(System.in);
     private static ArrayList<basic.race> races = new ArrayList<basic.race>();
-    private static ArrayList<world.baseTile> forests = new ArrayList<world.baseTile>();
-    private static ArrayList<world.baseTile> towns = new ArrayList<world.baseTile>();
+    private static ArrayList<tileBase> forests = new ArrayList<tileBase>();
+    private static ArrayList<tileBase> towns = new ArrayList<tileBase>();
 
     public static int chooseList(ArrayList<Object> list){
          util.utility.outputln("-1 Go back");
@@ -52,10 +53,10 @@ public final class utility {
     public static void addRace(basic.race r){
         races.add(r);
     }
-    public static void addTown(world.baseTile t){
+    public static void addTown(tileBase t){
         towns.add(t);
     }
-    public static void addForest(world.baseTile f){
+    public static void addForest(tileBase f){
         forests.add(f);
     }
 

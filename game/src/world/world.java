@@ -8,18 +8,18 @@ import java.util.ArrayList;
  * Created by brian on 4/11/2015.
  */
 public class world extends tickable{
-    baseTile[][] world;
+    tileBase[][] world;
 
     public world(int num) {
         util.utility.outputln("Preparing World");
 
-        world = new baseTile[num+2][num+2];
+        world = new tileBase[num+2][num+2];
 
         for (int x = 0; x < world.length; ++x) {
             for (int y = 0; y < world.length; ++y) {
-                world[x][y] = new baseTile();
+                world[x][y] = new tileBase();
 
-                //add random races with a 20% chance
+                //add random races with a 50% chance
                 world[x][y].addRandomRace(50);
 
                 if (world[x][y].isInhabited()){
@@ -30,13 +30,13 @@ public class world extends tickable{
 
         //create top amd bottom stone walls
         for (int i = 0; i < world.length; i++) {
-            world[i][0] = new wallBaseTile(i, 0);
-            world[i][world.length-1] = new wallBaseTile(i, world.length-1);
+            world[i][0] = new tileWall();
+            world[i][world.length-1] = new tileWall();
         }
         //create side stone walls
         for (int i = 0; i < world.length; i++) {
-            world[0][i] = new wallBaseTile(0, i);
-            world[world.length-1][i] = new wallBaseTile(world.length-1, i);
+            world[0][i] = new tileWall();
+            world[world.length-1][i] = new tileWall();
         }
 
 
@@ -54,7 +54,7 @@ public class world extends tickable{
                 if (check == 9) {
                     for (int i = 0; i < 3; i++) {
                         for (int j = 0; j < 3; j++) {
-                            world[x + i][y + j] = new townTile(x, y, tripRaces(x, y));
+                             world[x + i][y + j] = new townTile(x, y, tripRaces(x, y));
                         }
                     }
                     util.utility.addTown(world[x + 1][y + 1]);
@@ -110,7 +110,7 @@ public class world extends tickable{
         return world.length-3;
     }
 
-    public baseTile getBaseTile(int x, int y){
+    public tileBase getBaseTile(int x, int y){
         if (x<getNum() && y<getNum())
             return world[x][y];
         else

@@ -3,8 +3,8 @@ package world;
 /**
  * Created by brian on 4/12/2015.
  */
-public class wallBaseTile extends baseTile {
-    public wallBaseTile(int x, int y) {
+public class tileWall extends tileBase {
+    public tileWall() {
         super();
     }
 

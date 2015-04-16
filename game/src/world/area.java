@@ -45,6 +45,8 @@ public class area extends tickable{
     }
 
     public void  populate(race r){
+        actors.add(new tree(this));
+        actors.add(new tree(this));
         for (int i = 0; i < (int)(Math.random()*5+5); i++) {
             actors.add(new npc(this, r, 30));
         }

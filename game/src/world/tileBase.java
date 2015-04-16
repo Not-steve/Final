@@ -8,7 +8,7 @@ import java.util.Collections;
 /**
  * Created by brian on 4/11/2015.
  */
-public class baseTile extends tickable {
+public class tileBase extends tickable {
     protected int x,y;
     protected ArrayList<area> features = new ArrayList<area>();
     protected ArrayList<race> inhabitants = new ArrayList<race>();
@@ -17,20 +17,19 @@ public class baseTile extends tickable {
 
 
     //raced tile
-    public baseTile(race r){
+    public tileBase(race r){
         inhabitants.add(r);
         populate(inhabitants.get(0));
     }
 
     //raceless tile
-    public baseTile(){
+    public tileBase(){
         populate();
     }
 
-    // TODO make race based populate
     protected void populate(race r){
         for(int i = 4; i>=0; --i){
-            area a = new area("meadow");
+            area a = new area(areaName);
             a.populate(r);
             features.add(a);
         }
@@ -58,7 +57,14 @@ public class baseTile extends tickable {
 
         if (!flag) {
             inhabitants.add(r);
+            addRaceToAreas(r);
             Collections.sort(inhabitants);
+        }
+    }
+
+    protected void addRaceToAreas(race r){
+        for (int i = 0; i <inhabitants.size() ; i++) {
+            features.get(i).populate(r);
         }
     }
 
