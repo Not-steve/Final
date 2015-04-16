@@ -63,7 +63,7 @@ public class tileBase extends tickable {
     }
 
     protected void addRaceToAreas(race r){
-        for (int i = 0; i <inhabitants.size() ; i++) {
+        for (int i = 0; i <features.size() ; i++) {
             features.get(i).populate(r);
         }
     }
