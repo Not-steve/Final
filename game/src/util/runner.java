@@ -36,11 +36,16 @@ public class runner {
         //util.utility.outputln(square.getBaseTile(0, 0));
 
         world square;
-        square = new world(500);
+        try {
+            square = new world(500);
+        }
+        catch (OutOfMemoryError e){
+            utility.outputln("Whoops");
+        }
         /*
         try {
             for (int i = 0; i < 1000; i++) {
-                square = new world(500);
+                square = new world(100);
                 util.utility.outputln("World " + (i + 1));
             }
         }catch (OutOfMemoryError e){

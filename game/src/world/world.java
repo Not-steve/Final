@@ -7,16 +7,17 @@ import java.util.ArrayList;
 /**
  * Created by brian on 4/11/2015.
  */
-public class world extends tickable{
-    tileBase[][] world;
+public final class world extends tickable{
+    final tileBase[][] world;
+    tileWall wall = new tileWall();
 
     public world(int num) {
         util.utility.outputln("Preparing World");
 
         world = new tileBase[num+2][num+2];
 
-        for (int x = 0; x < world.length; ++x) {
-            for (int y = 0; y < world.length; ++y) {
+        for (int x = 1; x < world.length-1; ++x) {
+            for (int y = 1; y < world.length-1; ++y) {
                 world[x][y] = new tileBase();
 
                 //add random races with a 50% chance
@@ -30,13 +31,13 @@ public class world extends tickable{
 
         //create top amd bottom stone walls
         for (int i = 0; i < world.length; i++) {
-            world[i][0] = new tileWall();
-            world[i][world.length-1] = new tileWall();
+            world[i][0] = wall;
+            world[i][world.length-1] = wall;
         }
         //create side stone walls
         for (int i = 0; i < world.length; i++) {
-            world[0][i] = new tileWall();
-            world[world.length-1][i] = new tileWall();
+            world[0][i] = wall;
+            world[world.length-1][i] = wall;
         }
 
 

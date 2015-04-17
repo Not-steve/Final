@@ -3,7 +3,7 @@ package world;
 /**
  * Created by brian on 4/12/2015.
  */
-public class tileWall extends tileBase {
+public final class tileWall extends tileBase {
     public tileWall() {
         super();
     }
